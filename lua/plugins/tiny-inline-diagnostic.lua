@@ -9,7 +9,7 @@ return {
 			-- Available options:
 			-- "modern", "classic", "minimal", "powerline",
 			-- "ghost", "simple", "nonerdfont", "amongus"
-			preset = "simple",
+			preset = "classic",
 
 			transparent_bg = false, -- Set the background of the diagnostic to transparent
 
