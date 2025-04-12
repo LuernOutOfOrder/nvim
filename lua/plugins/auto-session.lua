@@ -9,5 +9,5 @@ return {
     suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
     -- log_level = 'debug',
   },
-  vim.keymap.set("n", "<leader>sc", ":SessionDelete<CR>"),
+  vim.keymap.set("n", "<leader>sd", ":SessionDelete<CR>"),
 }
