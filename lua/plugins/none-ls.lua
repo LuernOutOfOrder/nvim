@@ -21,6 +21,6 @@ return {
         null_ls.builtins.formatting.uncrustify,
       },
     })
-    vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {desc= "Format code in the current buffer"})
   end,
 }

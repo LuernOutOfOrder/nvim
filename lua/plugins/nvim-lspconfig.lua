@@ -33,8 +33,8 @@ return {
 			capabilities = capabilities,
 		})
 		-- keymaps
-		vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {})
-		vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})
-		vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+		vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {desc= "Display current function description hover"})
+		vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {desc= "Go to definition of current function"})
+		vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {desc= "Open code action window"})
 	end,
 }

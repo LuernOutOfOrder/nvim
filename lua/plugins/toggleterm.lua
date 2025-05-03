@@ -7,7 +7,7 @@ return {
 				require("toggleterm").setup({})
 			end,
 		},
-		vim.keymap.set("n", "<leader>th", ":ToggleTerm size=20 direction=horizontal<CR>"),
-		vim.keymap.set("n", "<leader>tv", ":ToggleTerm size=70 direction=vertical<CR>"),
-		vim.keymap.set("n", "<leader>tf", ":ToggleTerm size=70 direction=float<CR>"),
+		vim.keymap.set("n", "<leader>th", ":ToggleTerm size=20 direction=horizontal<CR>", {desc= "Toggle horizontal terminal"}),
+		vim.keymap.set("n", "<leader>tv", ":ToggleTerm size=70 direction=vertical<CR>", {desc= "Toggle vertical terminal"}),
+		vim.keymap.set("n", "<leader>tf", ":ToggleTerm size=70 direction=float<CR>", {desc= "Toggle floatting terminal"}),
 }

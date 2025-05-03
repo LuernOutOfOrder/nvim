@@ -14,5 +14,5 @@ return {
     -- fill any relevant options here
   },
   -- keymaps
-  vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>"),
+  vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>", {desc= "Toggle neo-tree files explorer"}),
 }
