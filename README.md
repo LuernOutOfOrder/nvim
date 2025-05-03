@@ -15,13 +15,14 @@
 - 'nvim-telescope/telescope.nvim',
 - "folke/todo-comments.nvim",
 - "akinsho/toggleterm.nvim",
-- "folke/which-key.nvim",
+- "folke/which-key.nvim"
 
 ### UX
-- "windwp/nvim-autopairs", 
-- "RRethy/vim-illuminate", 
-- "lukas-reineke/indent-blankline.nvim",
-- "rachartier/tiny-inline-diagnostic.nvim",
+- "windwp/nvim-autopairs" 
+- "RRethy/vim-illuminate" 
+- "lukas-reineke/indent-blankline.nvim"
+- "rachartier/tiny-inline-diagnostic.nvim"
+- "m4xshen/hardtime.nvim"
 ### LSP
 - 'nvimdev/lspsaga.nvim',
 - "williamboman/mason.nvim",
