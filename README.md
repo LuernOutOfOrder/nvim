@@ -16,7 +16,7 @@
 - "folke/todo-comments.nvim"   
 - "akinsho/toggleterm.nvim"   
 - "folke/which-key.nvim"
-
+- "sudormrfbin/cheatsheet.nvim"
 ### UX
 - "windwp/nvim-autopairs" 
 - "RRethy/vim-illuminate" 
