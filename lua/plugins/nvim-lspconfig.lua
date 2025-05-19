@@ -32,6 +32,9 @@ return {
 		lspconfig.bashls.setup({
 			capabilities = capabilities,
 		})
+    lspconfig.zls.setup({
+      capabilities = capabilities,
+    })
 		-- keymaps
 		vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {desc= "Display current function description hover"})
 		vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {desc= "Go to definition of current function"})
