@@ -16,7 +16,7 @@ return {
         null_ls.builtins.formatting.goimports_reviser,
         null_ls.builtins.formatting.golines,
         -- rust
-        null_ls.builtins.formatting.dxfmt,
+        -- null_ls.builtins.formatting.rustfmt,
         -- c, cpp
         null_ls.builtins.formatting.uncrustify,
       },

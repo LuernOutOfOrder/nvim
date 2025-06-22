@@ -7,7 +7,9 @@ return {
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
 		})
-		-- lspconfig.rust_analyzer.setup({})
+		-- lspconfig.rust_analyzer.setup({
+		--     capabilities = capabilities,
+		--   })
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
 		})
@@ -33,6 +35,9 @@ return {
 			capabilities = capabilities,
 		})
     lspconfig.zls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.taplo.setup({
       capabilities = capabilities,
     })
 		-- keymaps
