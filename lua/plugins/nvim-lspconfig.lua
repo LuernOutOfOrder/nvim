@@ -2,47 +2,91 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local lspconfig = require("lspconfig")
-		-- ensure_installed = {"lua_ls", "arduino_language_server", "asm_lsp", "clangd", "neocmake", "gopls", "jsonls", "harper_ls", "rust_analyzer", "bashls"}
-		lspconfig.lua_ls.setup({
+
+    -- Definition of all servers with new api
+		vim.lsp.config["lua_ls"] = {
+			cmd = { "lua-language-server" },
+			filetypes = { "lua" },
 			capabilities = capabilities,
-		})
-		-- lspconfig.rust_analyzer.setup({
-		--     capabilities = capabilities,
-		--   })
-		lspconfig.gopls.setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+				},
+			},
+		}
+
+		vim.lsp.config["gopls"] = {
+			cmd = { "gopls" },
 			capabilities = capabilities,
-		})
-		lspconfig.clangd.setup({
+		}
+
+		vim.lsp.config["clangd"] = {
+			cmd = { "clangd" },
 			capabilities = capabilities,
-		})
-		lspconfig.arduino_language_server.setup({
+		}
+
+		vim.lsp.config["arduino_language_server"] = {
+			cmd = { "arduino_language_server" },
 			capabilities = capabilities,
-		})
-		lspconfig.asm_lsp.setup({
+		}
+
+		vim.lsp.config["asm_lsp"] = {
+			cmd = { "asm_lsp" },
 			capabilities = capabilities,
-		})
-		lspconfig.neocmake.setup({
+		}
+
+		vim.lsp.config["neocmake"] = {
+			cmd = { "neocmake" },
 			capabilities = capabilities,
-		})
-		lspconfig.harper_ls.setup({
+		}
+
+		vim.lsp.config["harper_ls"] = {
+			cmd = { "harper_ls" },
 			capabilities = capabilities,
-		})
-		lspconfig.jsonls.setup({
+		}
+
+		vim.lsp.config["jsonls"] = {
+			cmd = { "json-languageserver", "--stdio" },
 			capabilities = capabilities,
-		})
-		lspconfig.bashls.setup({
+		}
+
+		vim.lsp.config["bashls"] = {
+			cmd = { "bash-language-server", "start" },
 			capabilities = capabilities,
+			filetypes = { "sh", "bash" },
+		}
+
+		vim.lsp.config["zls"] = {
+			cmd = { "zls" },
+			capabilities = capabilities,
+		}
+
+		vim.lsp.config["taplo"] = {
+			cmd = { "taplo", "lsp" },
+			capabilities = capabilities,
+			filetypes = { "toml" },
+		}
+
+    -- Enable all servers
+		vim.lsp.enable({
+			"lua_ls",
+			"gopls",
+			"clangd",
+			"arduino_language_server",
+			"asm_lsp",
+			"neocmake",
+			"harper_ls",
+			"jsonls",
+			"bashls",
+			"zls",
+			"taplo",
 		})
-    lspconfig.zls.setup({
-      capabilities = capabilities,
-    })
-    lspconfig.taplo.setup({
-      capabilities = capabilities,
-    })
-		-- keymaps
-		vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, {desc= "Display current function description hover"})
-		vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {desc= "Go to definition of current function"})
-		vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {desc= "Open code action window"})
+
+		-- Keymaps
+		vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "Display current function description (hover)" })
+		vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition of current function" })
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Open code action window" })
 	end,
 }
