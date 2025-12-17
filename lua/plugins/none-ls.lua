@@ -7,10 +7,6 @@ return {
 			sources = {
 				-- misc
 				null_ls.builtins.completion.spell,
-				-- rust
-				-- null_ls.builtins.formatting.rustfmt,
-				-- c, cpp
-				null_ls.builtins.formatting.uncrustify,
 				-- md
 				null_ls.builtins.formatting.markdownlint.with({
 					filetypes = { "markdown" },
