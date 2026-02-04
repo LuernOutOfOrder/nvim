@@ -27,12 +27,6 @@ return {
       capabilities = capabilities,
     }
 
-    vim.lsp.config["asm_lsp"] = {
-      cmd = { "asm-lsp" },
-      capabilities = capabilities,
-      filetypes = { "asm", "s", "S" },
-    }
-
     vim.lsp.config["jsonls"] = {
       cmd = { "json-languageserver", "--stdio" },
       capabilities = capabilities,
@@ -64,7 +58,6 @@ return {
     -- Enable all servers
     vim.lsp.enable({
       "lua_ls",
-      "asm_lsp",
       "clangd",
       "gopls",
       "jsonls",
