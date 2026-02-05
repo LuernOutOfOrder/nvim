@@ -27,6 +27,6 @@ return {
       lazygit:toggle()
     end, { desc = "Toggle LazyGit" })
 
-    -- vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+    vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
   end,
 }
