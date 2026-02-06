@@ -55,6 +55,9 @@ return {
       root_markers = { ".git", ".marksman.toml" },
     }
 
+    vim.lsp.config["rust_analyzer"] = { cmd = { "__disabled__" } }
+    vim.lsp.config["asm_lsp"] = { cmd = { "__disabled__" } }
+
     -- Enable all servers
     vim.lsp.enable({
       "lua_ls",
