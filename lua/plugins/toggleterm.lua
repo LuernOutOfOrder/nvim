@@ -21,6 +21,7 @@ return {
     vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm size=70 direction=vertical<cr>",
       { desc = "Toggle vertical terminal" })
     vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle floating terminal" })
+    vim.keymap.set("n", "<leader>tt", "<cmd>tab | terminal<cr>", { desc = "Toggle tab terminal" })
 
     -- LazyGit toggle
     vim.keymap.set("n", "<leader>tg", function()
