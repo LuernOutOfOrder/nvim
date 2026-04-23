@@ -1,6 +1,6 @@
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2") 
+vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.opt.number = true
@@ -13,5 +13,5 @@ vim.g.maplocalleader = "\\"
 
 -- misc options
 vim.g.lazyvim_check_order = false
-
-
+-- Global keymap
+vim.keymap.set("n", "<leader>tt", "<cmd>tab | terminal<cr>", { desc = "Toggle tab terminal" })
